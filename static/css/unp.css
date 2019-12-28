@@ -85,7 +85,7 @@ body {
 
 #upd_body_menu {
 	border: 1px solid blue;
-	width: 40px;
+	width: 45px;
 }
 
 #upd_body_main_display {
@@ -95,4 +95,21 @@ body {
 
 .upd_btn {
 	min-width: 180px;
+}
+
+.unp_menu_icon {
+	font-size: 20px;
+	color: Dodgerblue;
+}
+
+.unp_menu_btn {
+    font-size: 30px;
+    color: Mediumslateblue;
+    border: 0px;
+    background: white;
+}
+
+div#upd_body_menu div {
+    display: flex;
+    justify-content: center;
 }
