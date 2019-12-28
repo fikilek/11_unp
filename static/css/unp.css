@@ -1,3 +1,98 @@
-h1 {
-    color: brown;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border0-box;
+}
+
+body {
+	height: 100vh;
+}
+
+.parent {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+#main_menu_div, #page_menu_div  {
+	border: 1px solid red;
+	display: flex;
+	justify-content: center;
+	height: 40px;
+}
+
+#main_menu_div {
+	border: 1px solid red;
+	margin: 5px 10px 10px 10px;
+}
+
+#page_menu_div {
+	border: 1px solid blue;
+	margin: 0px 10px 10px 10px;
+}
+
+#unp_profile_div {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid grey;
+	margin: 10px;
+	flex-grow: 1;
+}
+
+#upd_heading {
+	margin: 5px;
+	height: 100px;
+	display: flex;
+}
+
+#upd_heading_picture {
+	border: 1px solid brown;
+	width: 100px;
+	height: 100%;
+}
+
+#img_upd_heading_picture {
+	width: 100px;
+	height: 100%;
+}
+
+#upd_heading_data {
+	border: 1px solid brown;
+	flex-grow: 1;
+	align-items: center;
+}
+/*
+#upd_heading_data_details , #upd_heading_data_stats {
+	border: 1px solid brown;
+	height: 50px;
+}
+*/
+
+#upd_heading_data_details, #upd_heading_data_stats {
+	/*border: 1px solid brown;*/
+	height: 50px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#upd_body {
+	/*border: 1px solid red;*/
+	margin: 0px 5px 5px 5px;
+	flex-grow: 1;
+	display: flex;
+}
+
+#upd_body_menu {
+	border: 1px solid blue;
+	width: 40px;
+}
+
+#upd_body_main_display {
+	border: 1px solid violet;
+	flex-grow: 1;
+}
+
+.upd_btn {
+	min-width: 180px;
 }
