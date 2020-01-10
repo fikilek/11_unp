@@ -10,7 +10,9 @@
     <!--fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
     <!--date range picker-->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
     <!-- unp CSS -->
@@ -18,10 +20,39 @@
   </head>
   <body>
 
-    <div class="parent">
+    <div class="ireps_div">
       <!--main_menu_div-->
       <div id="main_menu_div">
-        <p class="main_menu_div_text">main menu div</p>
+        <!--main menu left-->
+        <div class="mml">
+          
+          <!--ireps honme-->
+          <div>
+            <h3>ireps</h3>
+          </div>
+          <!--dashboard-->
+          <div>
+            <h3>dbd</h3>
+          </div>
+          <!--assets-->
+          <div>
+            <h3>asts</h3>
+          </div>
+          <!--transactions-->
+          <div>
+            <h3>trns</h3>
+          </div>
+          
+          
+        
+        </div>
+        
+        <!--main menu right-->
+        <div class="mmr">
+        
+        
+        </div>
+        
       </div>
       
       <!--page_menu_div-->
@@ -32,8 +63,8 @@
           
           <!--unp unp_pml_btn_title-->
           <div>
-            <button id="pgm_page_title" class="unp_pml_btn_title btn" title="user profile">
-              <b>user profile</b>
+            <button id="pgm_page_title" type="button" class="unp_pml_btn_title btn btn-sm pgm_title_btn" title="user profile">
+              user profile <span class="badge badge-light pgm_title_user_acc_id" title="unique user acc id">4</span>
             </button>
           </div>
   
@@ -44,11 +75,13 @@
                 class=""
                 data-toggle="tooltip"
                 title="date range">
+                &nbsp
                 <i class="far fa-calendar-alt"></i>
                 &nbsp
                 <span></span>
                 &nbsp
                 <i class="fa fa-caret-down"></i>
+                &nbsp
             </button>
           </div>
           
@@ -74,7 +107,6 @@
           </div>
           
         </div>
-        
 
         <div id="pmr">
         <!--page menu right-->
@@ -116,181 +148,165 @@
         </div>
       </div>
       
-      <!--unp_profile_div (upd)-->
+      <!--unp_profile_header (upd)-->
       <div id="unp_profile_div">
         
         <!--upd_heading-->
         <div id="upd_heading">
+          
           <!--upd_heading_picture-->
-          <div id="upd_heading_picture">
+          <div class="upd_heading_item" id="upd_heading_picture" >
             <img id="img_upd_heading_picture"  src="../static/images/passport_pic.jpg" >
           </div>
           
-          <!--upd_heading_data-->
-          <div id="upd_heading_data">
+          <!--unp ml2 menus-->
+          <div class="upd_heading_item unp_ml2_menus">
             
-            <!--upd_heading_data_details line1 : acc no, surname, name, email adr, mobile no-->
-            <div class="upd_heading_data_details">
-              
-              <!--user account no-->
-              
-              <div class="unp_id" title="this is a unique user id" >
-                  <i class="fas fa-address-card"></i>
-                  <span id="unp_id" class="non_editable"></span>
+            <div id="unp_ml2_menus">
+      
+              <!--unp profile-->
+              <div>
+                <button id="ml2_unp_profile" class="unp_menu_btn" title="user profile">
+                  <a href="{{ url_for('unp_profile') }}">
+                    <i class="fas fa-address-card unp_fa_icon"></i>
+                  </a>
+                </button>
               </div>
-              
-              <!--surname-->
-              <div class="form-group">
-                <label for="unp_surname" class="form-control-label ">surname</label>
-                <input type="text" class="form-control editable" id="unp_surname" name="unp_surname" value="kentane">
+      
+              <!--unp stats-->
+              <div>
+                <button id="ml2_unp_stats" class="unp_menu_btn" title="user stats">
+                  <a href="{{ url_for('unp_stats') }}">
+                    <i class="fas fa-database unp_fa_icon"></i>
+                  </a>
+                </button>
               </div>
-
-              
-              <!--name-->
-              <div class="form-group">
-                <label for="unp_name" class="form-control-label ">name</label>
-                <input type="text" class="form-control editable" id="unp_name" name="unp_name" value="fikile">
+        
+              <!--logon history-->
+              <div>
+                <button id="ml2_unp_logon_history" class="unp_menu_btn" title="logon history">
+                  <a href="{{ url_for('unp_logon_history') }}">
+                    <i class="fas fa-history unp_fa_icon"></i>
+                  </a>
+                </button>
               </div>
-              
-              <!--email adr (show datetime verified)-->
-              <div class="form-group">
-                <label for="unp_email_adr" class="form-control-label">email adr</label>
-                <input type="text" class="form-control non_editable" id="unp_email_adr" name="unp_email_adr" value="fikilek@innopen.co.za" >
+      
+              <!--BoQ's (these are quantities for all transactions for a user)-->
+              <div>
+                <button id="ml2_unp_boqs" class="unp_menu_btn" title="BoQ's">
+                  <a href="{{ url_for('unp_boqs') }}">
+                    <i class="fas fa-weight unp_fa_icon"></i>
+                  </a>
+                </button>
               </div>
-              
-              <!--email datetime verified (dtv)-->
-              <div class="form-group">
-                <label for="unp_email_adr_dtv" class="form-control-label"></label>
-                <input type="hidden" class="form-control editable" id="unp_email_adr_dtv" name="unp_email_adr_dtv" value="" >
+      
+              <!--SMS's-->
+              <div>
+                <button id="ml2_unp_smss" class="unp_menu_btn" title="text messages">
+                  <a href="{{ url_for('unp_smss') }}">
+                    <i class="fas fa-sms unp_fa_icon"></i>
+                  </a>
+                </button>
               </div>
-              
-              <!--mobile number (show datetime verified)-->
-              <div class="form-group">
-                <label for="unp_mobile_number" class="form-control-label">mobile number</label>
-                <input type="text" class="form-control editable" id="unp_mobile_number" name="unp_mobile_number" value="081 310 0063">
+      
+              <!--emails-->
+              <div>
+                <button id="ml2_unp_emails" class="unp_menu_btn" title="emails">
+                  <a href="{{ url_for('unp_emails') }}">
+                    <i class="fas fa-envelope unp_fa_icon"></i>
+                  </a>
+                </button>
               </div>
-              
-              <!--mobile number datetime verified (dtv)-->
-              <div class="form-group">
-                <label for="unp_mobile_number_dtv" class="form-control-label"></label>
-                <input type="hidden" class="form-control editable" id="unp_mobile_number_dtv" name="unp_mobile_number_dtv" value="">
-              </div>
-              
-              
-              
+    
             </div>
             
-            <!--upd_heading_data_details line2 : -->
-            <div class="upd_heading_data_details">
-              
-              <!--user id no-->
-              <div class="form-group">
-                <label for="unp_id_no" class="form-control-label">id no</label>
-                <input type="text" class="form-control editable" id="unp_id_no" name="unp_id_no" value="680416 6044 080">
-              </div>
-
-              <!--user dob-->
-              <div class="form-group">
-                <label for="unp_dob" class="form-control-label">date of birth</label>
-                <input type="text" class="form-control editable" id="unp_dob" name="unp_dob" value="68/04/16">
-              </div>
-
-              <!--user acc status-->
+          </div>
+          
+          <!--unp stats-->
+          <div class="upd_heading_item heading_stats">
+            
+            <!--user total trns-->
+            <div class="upd_stats">
+              <!--total ireps trns-->
               <div>
-                <div class="form-group">
-                  <label for="unp_acc_status" class="form-control-label">account status</label>
-                  <select id="unp_acc_status" class="form-control" name="unp_acc_status" disabled>
-                    <option value="active">active</option>
-                    <option value="not active">not active</option>
-                  </select>
-                </div>
+                <span>
+                total <strong>ireps</strong> trns
+                </span>
               </div>
-
-              <!--user date acc created-->
-              <div class="form-group">
-                <label for="unp_date_acc_created" class="form-control-label">date account created</label>
-                <input type="text" class="form-control non_editable" id="unp_date_acc_created" name="unp_date_acc_created" value="19/03/28">
+              <!--total ireps trns-->
+              <div>
+                <h1>34589</h1>
+              </div>
+            </div>
+            
+            <!--total user trns-->
+            <div class="upd_stats">
+              <!-- total user trns-->
+              <div>
+                <span>
+                total <strong>user</strong> trns
+                </span>
+              </div>
+              <!--total ireps trns-->
+              <div>
+                <h1>5268</h1>
+              </div>
+            </div>
+            
+            <!--user user qap trns-->
+            <div class="upd_stats">
+              <!-- total user qap trns-->
+              <div>
+                <span>
+                total <strong>qap</strong> trns
+                </span>
+              </div>
+              <!--total qap trns-->
+              <div>
+                <h1>5200</h1>
+              </div>
+            </div>
+            
+            <!--user qaf trns-->
+            <div class="upd_stats">
+              <!-- total user qaf trns-->
+              <div>
+                <span>
+                total pending <strong>qaf</strong> trns
+                </span>
+              </div>
+              <!--total qap trns-->
+              <div>
+                <h1>68</h1>
               </div>
             </div>
           </div>
+          
         </div >
       
         <!--upd_body-->
         <div id="upd_body">
-        
-          <!--upd_body_menu-->
-          <div id="upd_body_menu">
-            
-            <!--unp profile-->
-            <div>
-              <button id="ml2_unp_profile" class="unp_menu_btn" title="user profile">
-                <a href="{{ url_for('unp_profile') }}">
-                  <i class="fas fa-address-card unp_fa_icon"></i>
-                </a>
-              </button>
-            </div>
-            
-            <!--unp stats-->
-            <div>
-              <button id="ml2_unp_stats" class="unp_menu_btn" title="user stats">
-                <a href="{{ url_for('unp_stats') }}">
-                  <i class="fas fa-database unp_fa_icon"></i>
-                </a>
-              </button>
-            </div>
-            
-            <!--logon history-->
-            <div>
-              <button id="ml2_unp_logon_history" class="unp_menu_btn" title="logon history">
-                <a href="{{ url_for('unp_logon_history') }}">
-                   <i class="fas fa-history unp_fa_icon"></i>
-                </a>
-              </button>
-            </div>
-            
-            <!--BoQ's-->
-            <div>
-              <button id="ml2_unp_boqs" class="unp_menu_btn" title="BoQ's">
-                <a href="{{ url_for('unp_boqs') }}">
-                  <i class="fas fa-weight unp_fa_icon"></i>
-                </a>
-              </button>
-            </div>
-            
-            <!--SMS's-->
-            <div>
-              <button id="ml2_unp_smss" class="unp_menu_btn" title="text messages">
-                <a href="{{ url_for('unp_smss') }}">
-                  <i class="fas fa-sms unp_fa_icon"></i>
-                </a>
-              </button>
-            </div>
-            
-            <!--emails-->
-            <div>
-              <button id="ml2_unp_emails" class="unp_menu_btn" title="emails">
-                <a href="{{ url_for('unp_emails') }}">
-                  <i class="fas fa-envelope unp_fa_icon"></i>
-                </a>
-              </button>
-            </div>
-          </div>
-          
           <!--upd_body_main_display-->
           <div id="upd_body_main_display">
           {% block upd_body_main_display %}
           {% endblock upd_body_main_display %}
           </div>
         </div>
+        
       </div>
     </div>
+  
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     
     <!-- jQuery JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>-->
     <!-- Popper.JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>-->
     <!-- Bootstrap JS -->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>-->
     <!-- moment JS -->
     <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <!-- daterange picker -->

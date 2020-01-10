@@ -368,7 +368,7 @@ const ireps = (function() { //ireps
 						name : "pgm_daterange",
 						description : "",
 						output : "" ,
-						status : "hide",
+						status : "show",
 						state : "enabled",
 					},
 					pgm_edit : {
@@ -376,7 +376,7 @@ const ireps = (function() { //ireps
 						name : "pgm_edit",
 						description : "",
 						output : "" ,
-						status : "show",
+						status : "hide",
 						state : "enabled",
 					},
 					pgm_cancel : {

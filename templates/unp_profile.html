@@ -2,291 +2,56 @@
 
 {% block upd_body_main_display %}
 
-<!--todo: develop a better design of the profile.html page.-->
-
-<!--user roles-->
-<div id="unp_user_roles">
+<div class="unp_profile">
   
-  <h4>user roles</h4>
-  
-  <div>
-    <p>role name</p>
-    <p>role description</p>
+  <div class="block block1">
+    <div class="card">
+      <div class="card-header">
+        <button class="btn btn-primary unp_profile_add">+</button>
+        <span>user account details</span>
+        <button class="btn btn-primary">edit</button>
+      </div>
+      <div class="card-body">
+        <p>kentane fikile</p>
+        <p>fikilek@innopen.co.za</p>
+        <p>081 310 0063</p>
+        <p>680416 6044 080</p>
+        <p>16 april 1968</p>
+        <p>status: active</p>
+        <p>date acc opened: 20 nov 2019</p>
+      </div>
+    </div>
   </div>
-  
+  <div class="block block2">
+    <div class="card">
+      <div class="card-header">
+        <button class="btn btn-primary unp_profile_add">+</button>
+        <span>user next of kin</span>
+        <button class="btn btn-primary">edit</button>
+      </div>
+      <div class="card-body">
+        <p>name : zola sogoni</p>
+        <p>contact no: 081 310 0063</p>
+        <p>email : fikilek@innopen.co.za</p>
+      </div>
+    </div>
+  </div>
+  <div class="block block2">
+    <div class="card">
+      <div class="card-header">
+        <button class="btn btn-primary unp_profile_add">+</button>
+        <span>user roles</span>
+        <button class="btn btn-primary">Edit</button>
+      </div>
+      <div class="card-body">
+        <p>role name : supervisor</p>
+      </div>
+    </div>
+  </div>
+
+
 </div>
 
-<!--home address-->
-<div id="unp_home_adr_history">
-  
-  <h4>user home adr</h4>
-  
-  <!--home address history-->
-  <div class="nome_adr_history">
-    <!--home adr 1-->
-    <div>
-      <div class="form-group">
-        <label for="unp_home_adr" class="form-control-label">home address</label>
-        <input type="text" class="form-control" id="unp_home_adr" name="unp_home_adr" value="home adr">
-      </div>
-    </div>
-    
-    <!--start and end date-->
-    <div id="unp_home_adr_date1_to_date2">
-  
-      <!--occupation date-->
-      <div>
-        <div class="form-group">
-          <label for="unp_home_adr_start_date" class="form-control-label">occupation date</label>
-          <input type="text" class="form-control" id="unp_home_adr_start_date" name="unp_home_adr_start_date" value="yy/mm/dd">
-        </div>
-      </div>
-      
-      <!--vacation date-->
-      <div>
-        <div class="form-group">
-          <label for="unp_home_adr_end_date" class="form-control-label">vacation date</label>
-          <input type="text" class="form-control" id="unp_home_adr_end_date" name="unp_home_adr_end_date" value="yy/mm/dd">
-        </div>
-      </div>
-    </div>
-    
-    <!--proof of adr-->
-    <div>
-      <button class="btn btn-small">proof of adr</button>
-    </div>
-  </div>
 
-  
-</div>
-
-<!--user work history-->
-<div id="work_history">
-  
-  <h4>user work history</h4>
-  
-  <!--work place 1-->
-  <div>
-  
-    <!--work place name-->
-    <div>
-      <div class="form-group">
-        <label for="unp_work_place_name" class="form-control-label">work place name</label>
-        <input type="text" class="form-control" id="unp_work_place_name" name="unp_work_place_name" value="coca cola">
-      </div>
-    </div>
-    
-    <!--work job title-->
-    <div>
-      <div class="form-group">
-        <label for="unp_work_job_title" class="form-control-label">job title/position</label>
-        <input type="text" class="form-control" id="unp_work_job_title" name="unp_work_job_title" value="electrician">
-      </div>
-    </div>
-    
-    <!--start and end date-->
-    <div id="unp_work_history_date1_to_date2">
-  
-      <!--start date-->
-      <div>
-        <div class="form-group">
-          <label for="unp_work_start_date" class="form-control-label">start date</label>
-          <input type="text" class="form-control" id="unp_work_start_date" name="unp_work_start_date" value="start date">
-        </div>
-      </div>
-      
-      <!--end date-->
-      <div>
-        <div class="form-group">
-          <label for="unp_work_end_date" class="form-control-label">end date</label>
-          <input type="text" class="form-control" id="unp_work_end_date" name="unp_work_end_date" value="end date">
-        </div>
-      </div>
-    </div>
-    
-    <!--work contact details-->
-    <div>
-      
-      <!--contact person-->
-      <div>
-        <div class="form-group">
-          <label for="unp_work_contact_person" class="form-control-label">contact person</label>
-          <input type="text" class="form-control" id="unp_work_contact_person" name="unp_work_contact_person" value="kentane fikile">
-        </div>
-      </div>
-      
-      <!--contact number-->
-      <div>
-        <div class="form-group">
-          <label for="unp_work_contact_no" class="form-control-label">contact number</label>
-          <input type="text" class="form-control" id="unp_work_contact_no" name="unp_work_contact_no" value="081 081 1234">
-        </div>
-      </div>
-      
-      <!--contact email adr-->
-      <div>
-        <div class="form-group">
-          <label for="unp_work_email_adr" class="form-control-label">email adr</label>
-          <input type="text" class="form-control" id="unp_work_email_adr" name="unp_work_email_adr" value="adr@work.co.za">
-        </div>
-      </div>
-      
-    </div>
-    
-    <!--work address-->
-    <div>
-      <div class="form-group">
-        <label for="unp_work_address" class="form-control-label">work address</label>
-        <input type="text" class="form-control" id="unp_work_address" name="unp_work_address" value="work adr">
-      </div>
-    </div>
-
-    
-    <!--attachements-->
-    <div>
-      <!--todo: prepare a div to attach work related documents. these could be appointment letter, resignation leter, etc-->
-    </div>
-    
-  </div>
-  
-</div>
-
-<!--user acdemic history-->
-<div id="academic_history">
-  
-  <h4>user academic history</h4>
-  
-  <!--academic place 1-->
-  <div>
-  
-    <!--academic place name-->
-    <div>
-      <div class="form-group">
-        <label for="unp_academic_place_name" class="form-control-label">academic place name</label>
-        <input type="text" class="form-control" id="unp_academic_place_name" name="unp_academic_place_name" value="rhodes university">
-      </div>
-    </div>
-    
-    <!--academic programme-->
-    <div>
-      <!--acedemic programme name-->
-      <!--acedemic programme name-->
-      <div>
-        <div class="form-group">
-          <label for="unp_academic_programme_name" class="form-control-label">academic programme</label>
-          <input type="text" class="form-control" id="unp_academic_programme_name" name="unp_academic_programme_name" value="journalism">
-        </div>
-      </div>
-      
-      <!--acedemic programme status-->
-      <div>
-        <div class="form-group">
-          <label for="unp_acc_status" class="form-control-label">acc status</label>
-          <select id="unp_acc_status" class="form-control" name="unp_acc_status">
-            <option value="in progress" >in progress</option>
-            <option value="in progress" >on pause</option>
-            <option value="in progress" >abandoned</option>
-            <option value="finished">finished</option>
-          </select>
-        </div>
-      </div>
-    </div>
-    
-    <!--start and end date-->
-    <div id="unp_academic_history_date1_to_date2">
-  
-      <!--start date-->
-      <div>
-        <div class="form-group">
-          <label for="unp_academic_start_date" class="form-control-label">start date</label>
-          <input type="text" class="form-control" id="unp_academic_start_date" name="unp_academic_start_date" value="start date">
-        </div>
-      </div>
-      
-      <!--end date-->
-      <div>
-        <div class="form-group">
-          <label for="unp_academic_end_date" class="form-control-label">end date</label>
-          <input type="text" class="form-control" id="unp_academic_end_date" name="unp_academic_end_date" value="end date">
-        </div>
-      </div>
-    </div>
-    
-    <!--academic contact details-->
-    <div>
-      
-      <!--contact person-->
-      <div>
-        <div class="form-group">
-          <label for="unp_academic_contact_person" class="form-control-label">contact person</label>
-          <input type="text" class="form-control" id="unp_academic_contact_person" name="unp_academic_contact_person" value="kentane fikile">
-        </div>
-      </div>
-      
-      <!--contact number-->
-      <div>
-        <div class="form-group">
-          <label for="unp_academic_contact_no" class="form-control-label">contact number</label>
-          <input type="text" class="form-control" id="unp_academic_contact_no" name="unp_academic_contact_no" value="081 081 1234">
-        </div>
-      </div>
-      
-      <!--contact email adr-->
-      <div>
-        <div class="form-group">
-          <label for="unp_academic_email_adr" class="form-control-label">email adr</label>
-          <input type="text" class="form-control" id="unp_academic_email_adr" name="unp_academic_email_adr" value="adr@academic.co.za">
-        </div>
-      </div>
-      
-    </div>
-    
-    <!--academic address-->
-    <div>
-      <div class="form-group">
-        <label for="unp_academic_address" class="form-control-label">academic address</label>
-        <input type="text" class="form-control" id="unp_academic_address" name="unp_academic_address" value="academic adr">
-      </div>
-    </div>
-    
-    <!--attachements-->
-    <div>
-      <!--todo: prepare a div to attach academic related documents. these could be appointment letter, resignation leter, etc-->
-    </div>
-    
-  </div>
-  
-</div>
-
-<!--next of keen (nok)-->
-<div id="next_of_keen">
-  
-  <h4>next of keen</h4>
-  
-  <!--next of keen 1-->
-  <div>
-    <div class="form-group">
-      <label for="unp_nok_fullname" class="form-control-label">fullname</label>
-      <input type="text" class="form-control" id="unp_nok_fullname" name="unp_nok_fullname" value="kentane sitha">
-    </div>
-  </div>
-  
-  <!--contact number-->
-  <div>
-    <div class="form-group">
-      <label for="unp_nok_contact_no" class="form-control-label">contact number</label>
-      <input type="text" class="form-control" id="unp_nok_contact_no" name="unp_nok_contact_no" value="082 082 1234">
-    </div>
-  </div>
-  
-  <!--contact email adr-->
-  <div>
-    <div class="form-group">
-      <label for="unp_nok_email_adr" class="form-control-label">email adr</label>
-      <input type="text" class="form-control" id="unp_nok_email_adr" name="unp_nok_email_adr" value="nok@person.co.za">
-    </div>
-  </div>
-  
-</div>
 
 {% endblock upd_body_main_display %}
